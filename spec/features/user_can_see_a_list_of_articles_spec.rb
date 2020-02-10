@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'List artcles on index page' do 
+feature 'List articles on index page' do 
     context 'with articles in db' do
         before do 
             visit root_path
