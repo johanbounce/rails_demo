@@ -16,5 +16,9 @@ feature 'List articles on index page' do
         it 'displays second article title' do
             expect(page).to have_content 'Some really breaking action'
         end
+
+        it 'show an edit button' do
+            expect(page).to have_content 'Edit'
+        end
     end
 end 
