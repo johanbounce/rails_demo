@@ -1,5 +1,5 @@
 feature 'User can' do
-    context 'edit and article' do
+    context 'edit an article' do
         before do
             create(:article, title: 'Hello errady', content: 'Play pookers')
             visit root_path
