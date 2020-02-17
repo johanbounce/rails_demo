@@ -1,7 +1,7 @@
 feature 'User can' do
     context 'edit and article' do
         before do
-            create(:article, title: 'Hey errady', content: 'Play pookers')
+            create(:article, title: 'Hello errady', content: 'Play pookers')
             visit root_path
             click_on 'Edit'
         end
@@ -14,6 +14,12 @@ feature 'User can' do
             fill_in 'Content', with: 'Best citys for purties'
             click_on 'Update Article'
             expect(page).to have_content 'Best citys for purties'
+        end
+
+        it 'User can edit title' do
+            fill_in 'Title', with: 'Vegas Baby'
+            click_on 'Update Article'
+            expect(page).to have_content 'Vegas Baby'
         end
     end
 end
